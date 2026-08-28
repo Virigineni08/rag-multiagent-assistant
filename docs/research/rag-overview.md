@@ -12,3 +12,5 @@ However, in case of this task, a larger problem is lack of access to private/new
 4. Chunking              → LangChain text splitters (e.g. RecursiveCharacterTextSplitter)
 5. Embedding Generation  → OpenAI Embeddings API (via langchain-openai)
 6. Vector Store Indexing → ChromaDB
+## RAG Query Pipeline
+Embeddings encode meaning using coordinates in a vector space, but various embedding models have different spaces in which the same text is embedded, much like two distinct coordinate spaces that cannot be compared. Using different embedding models for the query and the chunks would render similarity measures meaningless because "distance" in one embedding space does not necessarily translate to distance in another. Thus, using the same model will ensure that the query and the chunks are placed in the same embedding space.
